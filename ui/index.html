@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ambox F2F</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link href="resource/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <style type="text/css">
+          body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+          }
+          .sidebar-nav {
+            padding: 9px 0;
+          }
+        </style>
+        <link href="resource/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+    </head>
+    <body>
+
+		<div class="navbar navbar-inverse navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container-fluid">
+					<a class="brand" href="">Ambox F2F</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row-fluid">
+				<div class="span3">
+					<div class="well sidebar-nav">
+						<ul id="f2f_menu" class="nav nav-list">
+							<li class="nav-header">Menu</li>
+							<li><a href="#" data-section="friends">Friends</a></li>
+							<li><a href="#" data-section="chat">Chat</a></li>
+							<li><a href="#" data-section="settings">Settings</a></li>
+							<li><a href="#" data-section="stats">Statistics</a></li>
+							<li><a href="#" data-section="log">Log</a></li>
+							<li class="nav-header">Other</li>
+							<li><a href="service/identity/download">Download ID</a></li>
+						</ul>
+					</div><!--/.well -->
+				</div><!--/span-->
+				
+				<div class="span9">
+					<h1 id="f2f_title"></h1>
+					<div id="f2f_alert_box"></div>
+
+					<div class="f2f_section" id="f2f_section_friends">
+						<input id="friends_upload" type="file">
+						<form class="form-inline">
+							<input type="text" name="identity" class="input-large" placeholder="Identity">
+							<input type="text" name="address" class="input-large" placeholder="Address and port">
+							<button type="submit" class="btn">Add</button>
+						</form>
+						<div style="overflow-y: auto; height:600px;">
+							<table class="table table-condensed table-hover">
+							</table>
+						</div>
+						<table class="table table-condensed table-hover">
+						</table>
+					</div>
+					
+					<div class="f2f_section" id="f2f_section_chat">
+						<ul class="nav nav-tabs" id="chat_section_menu">
+							<li><a href="#" data-chat-section="public">Global</a></li>
+							<li><a href="#" data-chat-section="friends">Friends</a></li>
+							<li><button class="btn" id="chat_add_button">Add</button></li>
+						</ul>
+						<form class="form-inline">
+							<input type="text" name="text" class="input-xxlarge" placeholder="Text">
+							<button type="submit" class="btn">Send</button>
+						</form>
+						<div style="overflow-y: auto; height:600px;">
+							<table class="table table-condensed table-hover">
+							</table>
+						</div>
+						
+					</div>
+
+					<div class="f2f_section" id="f2f_section_settings">
+						<form class="form-horizontal">
+							<div class="control-group">
+								<label class="control-label" for="settings_nickname">Nickname</label>
+								<div class="controls">
+									<input type="text" id="settings_nickname" placeholder="Nickname">
+								</div>
+							</div>
+							<div class="form-actions">
+								<button type="submit" id="settings_button_save" class="btn btn-primary">Save</button>
+								<button type="button" id="settings_button_reset" class="btn">Reset</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div><!--/row-->
+			
+			<hr>
+
+			<footer>
+			<p>&copy; Company 2012</p>
+			</footer>
+		</div><!--/.fluid-container-->
+
+		<script src="resource/jquery.js"></script>
+		<script src="resource/main.js"></script>
+		<script src="resource/bootstrap/js/bootstrap.js"></script>
+    </body>
+</html>
