@@ -1,4 +1,4 @@
-package fr.ambox.f2f.configuration;
+package fr.ambox.p2p.configuration;
 
 import java.io.IOException;
 import java.security.KeyPair;
@@ -9,11 +9,11 @@ import java.util.HashMap;
 
 import org.json.simple.JSONObject;
 
-import fr.ambox.f2f.UserService;
-import fr.ambox.f2f.connexion.PDU;
-import fr.ambox.f2f.connexion.ReceptionData;
-import fr.ambox.f2f.http.HttpResponse;
-import fr.ambox.f2f.peers.PeerId;
+import fr.ambox.p2p.UserService;
+import fr.ambox.p2p.connexion.PDU;
+import fr.ambox.p2p.connexion.ReceptionData;
+import fr.ambox.p2p.http.HttpResponse;
+import fr.ambox.p2p.peers.PeerId;
 
 public class IdentityService extends UserService {
 	

@@ -1,17 +1,17 @@
-package fr.ambox.f2f.connexion;
+package fr.ambox.p2p.connexion;
 
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.net.Socket;
 
-import fr.ambox.f2f.Service;
-import fr.ambox.f2f.UserService;
-import fr.ambox.f2f.configuration.IdentityService;
-import fr.ambox.f2f.peers.Friend;
-import fr.ambox.f2f.peers.FriendshipService;
-import fr.ambox.f2f.peers.PeerId;
-import fr.ambox.f2f.peers.PeersService;
+import fr.ambox.p2p.Service;
+import fr.ambox.p2p.UserService;
+import fr.ambox.p2p.configuration.IdentityService;
+import fr.ambox.p2p.peers.Friend;
+import fr.ambox.p2p.peers.FriendshipService;
+import fr.ambox.p2p.peers.PeerId;
+import fr.ambox.p2p.peers.PeersService;
 
 public class ConnexionHandler extends Service {
 	private Socket requestSocket;

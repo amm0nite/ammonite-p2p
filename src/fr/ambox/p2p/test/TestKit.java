@@ -1,14 +1,14 @@
-package fr.ambox.f2f.test;
+package fr.ambox.p2p.test;
 
 import java.io.IOException;
 import java.util.HashMap;
 
-import fr.ambox.f2f.App;
-import fr.ambox.f2f.chat.ChatService;
-import fr.ambox.f2f.configuration.ConfigurationService;
-import fr.ambox.f2f.configuration.IdentityService;
-import fr.ambox.f2f.peers.FriendshipService;
-import fr.ambox.f2f.peers.PeersService;
+import fr.ambox.p2p.App;
+import fr.ambox.p2p.chat.ChatService;
+import fr.ambox.p2p.configuration.ConfigurationService;
+import fr.ambox.p2p.configuration.IdentityService;
+import fr.ambox.p2p.peers.FriendshipService;
+import fr.ambox.p2p.peers.PeersService;
 
 public class TestKit {
 	private static App[] apps;

@@ -1,4 +1,4 @@
-package fr.ambox.f2f.peers;
+package fr.ambox.p2p.peers;
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;
@@ -6,7 +6,7 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import org.json.simple.JSONObject;
 
-import fr.ambox.f2f.connexion.Frame;
+import fr.ambox.p2p.connexion.Frame;
 
 public class Friend {
 	private PeerId peerId;

@@ -1,8 +1,8 @@
-package fr.ambox.f2f;
+package fr.ambox.p2p;
 
 import java.util.Collection;
 import java.util.HashMap;
-import fr.ambox.f2f.utils.Logger;
+import fr.ambox.p2p.utils.Logger;
 
 public abstract class Service extends Thread {
 	private HashMap<String, Service> services;

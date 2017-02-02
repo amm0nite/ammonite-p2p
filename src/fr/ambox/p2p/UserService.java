@@ -1,10 +1,10 @@
-package fr.ambox.f2f;
+package fr.ambox.p2p;
 
 import java.util.HashMap;
 
-import fr.ambox.f2f.connexion.PDU;
-import fr.ambox.f2f.connexion.ReceptionData;
-import fr.ambox.f2f.http.HttpResponse;
+import fr.ambox.p2p.connexion.PDU;
+import fr.ambox.p2p.connexion.ReceptionData;
+import fr.ambox.p2p.http.HttpResponse;
 
 public abstract class UserService extends Service {
 	public abstract void handle(PDU pdu, ReceptionData receptionData);

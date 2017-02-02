@@ -1,14 +1,14 @@
-package fr.ambox.f2f.connexion;
+package fr.ambox.p2p.connexion;
 
 import java.util.HashMap;
 
-import fr.ambox.f2f.Service;
-import fr.ambox.f2f.configuration.IdentityService;
-import fr.ambox.f2f.peers.Friend;
-import fr.ambox.f2f.peers.FriendComException;
-import fr.ambox.f2f.peers.FriendshipService;
-import fr.ambox.f2f.peers.PeerId;
-import fr.ambox.f2f.utils.CircularList;
+import fr.ambox.p2p.Service;
+import fr.ambox.p2p.configuration.IdentityService;
+import fr.ambox.p2p.peers.Friend;
+import fr.ambox.p2p.peers.FriendComException;
+import fr.ambox.p2p.peers.FriendshipService;
+import fr.ambox.p2p.peers.PeerId;
+import fr.ambox.p2p.utils.CircularList;
 
 public class ConnexionEmitter extends Service {
 	private static long pheromoneMaxAge = 10000;

@@ -1,4 +1,4 @@
-package fr.ambox.f2f.peers;
+package fr.ambox.p2p.peers;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,10 +7,10 @@ import java.util.Iterator;
 
 import org.json.simple.JSONArray;
 
-import fr.ambox.f2f.UserService;
-import fr.ambox.f2f.connexion.PDU;
-import fr.ambox.f2f.connexion.ReceptionData;
-import fr.ambox.f2f.http.HttpResponse;
+import fr.ambox.p2p.UserService;
+import fr.ambox.p2p.connexion.PDU;
+import fr.ambox.p2p.connexion.ReceptionData;
+import fr.ambox.p2p.http.HttpResponse;
 
 public class FriendshipService extends UserService {
 	private ArrayList<Friend> friends;

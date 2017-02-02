@@ -1,6 +1,6 @@
-package fr.ambox.f2f.chat;
+package fr.ambox.p2p.chat;
 
-import fr.ambox.f2f.connexion.PDU;
+import fr.ambox.p2p.connexion.PDU;
 
 @SuppressWarnings("serial")
 public class ChatPDU extends PDU {

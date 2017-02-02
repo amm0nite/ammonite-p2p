@@ -1,20 +1,20 @@
-package fr.ambox.f2f.chat;
+package fr.ambox.p2p.chat;
 
 import java.util.HashMap;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import fr.ambox.f2f.UserService;
-import fr.ambox.f2f.configuration.IdentityService;
-import fr.ambox.f2f.connexion.ConnexionEmitter;
-import fr.ambox.f2f.connexion.PDU;
-import fr.ambox.f2f.connexion.ReceptionData;
-import fr.ambox.f2f.http.HttpResponse;
-import fr.ambox.f2f.peers.Friend;
-import fr.ambox.f2f.peers.FriendshipService;
-import fr.ambox.f2f.peers.PeerId;
-import fr.ambox.f2f.peers.PeersService;
-import fr.ambox.f2f.utils.CircularList;
+import fr.ambox.p2p.UserService;
+import fr.ambox.p2p.configuration.IdentityService;
+import fr.ambox.p2p.connexion.ConnexionEmitter;
+import fr.ambox.p2p.connexion.PDU;
+import fr.ambox.p2p.connexion.ReceptionData;
+import fr.ambox.p2p.http.HttpResponse;
+import fr.ambox.p2p.peers.Friend;
+import fr.ambox.p2p.peers.FriendshipService;
+import fr.ambox.p2p.peers.PeerId;
+import fr.ambox.p2p.peers.PeersService;
+import fr.ambox.p2p.utils.CircularList;
 
 public class ChatService extends UserService {
 	private static int ListLength = 256;

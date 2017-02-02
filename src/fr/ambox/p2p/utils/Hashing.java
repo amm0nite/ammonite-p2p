@@ -1,4 +1,4 @@
-package fr.ambox.f2f.utils;
+package fr.ambox.p2p.utils;
 
 
 import java.io.ByteArrayOutputStream;

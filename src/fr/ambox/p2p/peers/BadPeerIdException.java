@@ -1,4 +1,4 @@
-package fr.ambox.f2f.peers;
+package fr.ambox.p2p.peers;
 
 @SuppressWarnings("serial")
 public class BadPeerIdException extends Exception {

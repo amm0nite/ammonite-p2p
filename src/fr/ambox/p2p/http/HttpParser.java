@@ -1,4 +1,4 @@
-package fr.ambox.f2f.http;
+package fr.ambox.p2p.http;
 
 import java.net.URI;
 import java.net.URISyntaxException;

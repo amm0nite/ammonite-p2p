@@ -1,6 +1,6 @@
-package fr.ambox.f2f.chat;
+package fr.ambox.p2p.chat;
 
-import fr.ambox.f2f.connexion.ReceptionData;
+import fr.ambox.p2p.connexion.ReceptionData;
 
 public class ChatLineData {
 	public ReceptionData receptionData;

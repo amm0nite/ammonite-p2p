@@ -1,6 +1,6 @@
-package fr.ambox.f2f.connexion;
+package fr.ambox.p2p.connexion;
 
-import fr.ambox.f2f.peers.PeerId;
+import fr.ambox.p2p.peers.PeerId;
 
 @SuppressWarnings("serial")
 public class UnicastP2PMessage extends P2PMessage {

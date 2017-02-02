@@ -1,4 +1,4 @@
-package fr.ambox.f2f.peers;
+package fr.ambox.p2p.peers;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -11,7 +11,7 @@ import java.security.PublicKey;
 
 import org.apache.commons.codec.binary.Base64;
 
-import fr.ambox.f2f.utils.Hashing;
+import fr.ambox.p2p.utils.Hashing;
 
 
 @SuppressWarnings("serial")

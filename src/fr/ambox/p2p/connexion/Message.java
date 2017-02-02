@@ -1,4 +1,4 @@
-package fr.ambox.f2f.connexion;
+package fr.ambox.p2p.connexion;
 
 import java.io.Serializable;
 

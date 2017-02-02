@@ -1,4 +1,4 @@
-package fr.ambox.f2f.test;
+package fr.ambox.p2p.test;
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.KeyPair;

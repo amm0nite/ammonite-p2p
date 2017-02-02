@@ -1,4 +1,4 @@
-package fr.ambox.f2f.connexion;
+package fr.ambox.p2p.connexion;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -21,8 +21,8 @@ import javax.crypto.NoSuchPaddingException;
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
-import fr.ambox.f2f.chat.ChatPDU;
-import fr.ambox.f2f.utils.Hashing;
+import fr.ambox.p2p.chat.ChatPDU;
+import fr.ambox.p2p.utils.Hashing;
 
 @SuppressWarnings("serial")
 public class EncryptedSerializable implements Serializable {

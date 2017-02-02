@@ -1,4 +1,4 @@
-package fr.ambox.f2f.test;
+package fr.ambox.p2p.test;
 
 import java.util.List; 
 import javax.script.ScriptEngineFactory; 

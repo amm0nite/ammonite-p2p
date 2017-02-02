@@ -1,15 +1,15 @@
-package fr.ambox.f2f;
+package fr.ambox.p2p;
 
-import fr.ambox.f2f.chat.ChatService;
-import fr.ambox.f2f.configuration.ConfigurationService;
-import fr.ambox.f2f.configuration.IdentityService;
-import fr.ambox.f2f.connexion.ConnexionEmitter;
-import fr.ambox.f2f.connexion.ConnexionReceiver;
-import fr.ambox.f2f.connexion.ConnexionWatcher;
-import fr.ambox.f2f.http.HttpReceiver;
-import fr.ambox.f2f.peers.FriendshipService;
-import fr.ambox.f2f.peers.PeersService;
-import fr.ambox.f2f.utils.Logger;
+import fr.ambox.p2p.chat.ChatService;
+import fr.ambox.p2p.configuration.ConfigurationService;
+import fr.ambox.p2p.configuration.IdentityService;
+import fr.ambox.p2p.connexion.ConnexionEmitter;
+import fr.ambox.p2p.connexion.ConnexionReceiver;
+import fr.ambox.p2p.connexion.ConnexionWatcher;
+import fr.ambox.p2p.http.HttpReceiver;
+import fr.ambox.p2p.peers.FriendshipService;
+import fr.ambox.p2p.peers.PeersService;
+import fr.ambox.p2p.utils.Logger;
 
 public class App extends Service {
 	public App(String appid) {

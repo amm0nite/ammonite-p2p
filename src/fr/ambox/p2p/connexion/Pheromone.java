@@ -1,6 +1,6 @@
-package fr.ambox.f2f.connexion;
+package fr.ambox.p2p.connexion;
 
-import fr.ambox.f2f.peers.Friend;
+import fr.ambox.p2p.peers.Friend;
 
 public class Pheromone {
 	private Friend friend;

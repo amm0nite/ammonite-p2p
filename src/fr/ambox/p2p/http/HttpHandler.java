@@ -1,4 +1,4 @@
-package fr.ambox.f2f.http;
+package fr.ambox.p2p.http;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -7,8 +7,8 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.Socket;
 
-import fr.ambox.f2f.Service;
-import fr.ambox.f2f.UserService;
+import fr.ambox.p2p.Service;
+import fr.ambox.p2p.UserService;
 
 public class HttpHandler extends Service {
 	private Socket socket;

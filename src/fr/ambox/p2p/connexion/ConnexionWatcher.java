@@ -1,9 +1,9 @@
-package fr.ambox.f2f.connexion;
+package fr.ambox.p2p.connexion;
 
 import java.util.HashMap;
 
-import fr.ambox.f2f.Service;
-import fr.ambox.f2f.peers.PeerId;
+import fr.ambox.p2p.Service;
+import fr.ambox.p2p.peers.PeerId;
 
 public class ConnexionWatcher extends Service {
 	private HashMap<PeerId, Long> receivedP2PMessageIdBase;

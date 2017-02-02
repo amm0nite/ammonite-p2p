@@ -1,11 +1,11 @@
-package fr.ambox.f2f.http;
+package fr.ambox.p2p.http;
 
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-import fr.ambox.f2f.Service;
-import fr.ambox.f2f.configuration.ConfigurationService;
+import fr.ambox.p2p.Service;
+import fr.ambox.p2p.configuration.ConfigurationService;
 
 public class HttpReceiver extends Service {
 	private ServerSocket serverSocket;

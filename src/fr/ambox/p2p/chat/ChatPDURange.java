@@ -1,4 +1,4 @@
-package fr.ambox.f2f.chat;
+package fr.ambox.p2p.chat;
 
 public enum ChatPDURange {
 	FRIENDS, PRIVATE, PUBLIC

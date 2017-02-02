@@ -1,6 +1,6 @@
-package fr.ambox.f2f.utils;
+package fr.ambox.p2p.utils;
 
-import fr.ambox.f2f.Service;
+import fr.ambox.p2p.Service;
 
 public class Logger extends Service {
 	private String appid;
