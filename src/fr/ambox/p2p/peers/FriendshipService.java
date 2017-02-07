@@ -5,8 +5,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 
-import org.json.simple.JSONArray;
-
+import com.google.gson.JsonArray;
 import fr.ambox.p2p.UserService;
 import fr.ambox.p2p.connexion.PDU;
 import fr.ambox.p2p.connexion.ReceptionData;
@@ -24,9 +23,8 @@ public class FriendshipService extends UserService {
 		
 	}
 	
-	@SuppressWarnings("unchecked")
-	private JSONArray JsonFriendList() {
-		JSONArray jsonArray = new JSONArray();
+	private JsonArray JsonFriendList() {
+		JsonArray jsonArray = new JsonArray();
 		for (Friend f : this.friends) {
 			jsonArray.add(f.toJSON());
 		}
@@ -59,7 +57,7 @@ public class FriendshipService extends UserService {
 
 	@Override
 	public HttpResponse apiGET(String[] elements, HashMap<String, String> params) {
-		return new HttpResponse(200, this.JsonFriendList().toJSONString());
+		return new HttpResponse(200, this.JsonFriendList().toString());
 	}
 
 	@Override

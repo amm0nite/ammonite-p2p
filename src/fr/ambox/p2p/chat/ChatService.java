@@ -1,8 +1,9 @@
 package fr.ambox.p2p.chat;
 
 import java.util.HashMap;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 
 import fr.ambox.p2p.UserService;
 import fr.ambox.p2p.configuration.IdentityService;
@@ -62,7 +63,7 @@ public class ChatService extends UserService {
 	}
 
 	@SuppressWarnings("unchecked")
-	synchronized private JSONArray JsonMessageList(ChatPDURange range, String id) {
+	synchronized private JsonArray JsonMessageList(ChatPDURange range, String id) {
 		Object[] data = new Object[0];
 		if (range == ChatPDURange.PUBLIC) {
 			data = this.publicMessages.values();
@@ -85,14 +86,14 @@ public class ChatService extends UserService {
 			}
 		}
 
-		JSONArray jsonArray = new JSONArray();
+		JsonArray jsonArray = new JsonArray();
 		for (Object o : data) {	
 			ChatLineData cl = (ChatLineData) o;
-			JSONObject mjson = new JSONObject();
-			mjson.put("author", cl.receptionData.sourcePeerId.getNickname());
-			mjson.put("text", 	cl.text);
-			mjson.put("time", 	cl.time);
-			mjson.put("hops", 	cl.receptionData.hops);
+			JsonObject mjson = new JsonObject();
+			mjson.addProperty("author", cl.receptionData.sourcePeerId.getNickname());
+			mjson.addProperty("text", 	cl.text);
+			mjson.addProperty("time", 	cl.time);
+			mjson.addProperty("hops", 	cl.receptionData.hops);
 			jsonArray.add(mjson);
 		}
 		return jsonArray;
@@ -115,7 +116,7 @@ public class ChatService extends UserService {
 		String range = params.get("range");
 		String id = params.get("id");
 		if (range != null && !range.isEmpty()) {
-			JSONArray res = new JSONArray();
+			JsonArray res = new JsonArray();
 			if (range.equals("private") && id != null && !id.isEmpty()) {
 				res = this.JsonMessageList(ChatPDURange.PRIVATE, id);
 			}
@@ -126,7 +127,7 @@ public class ChatService extends UserService {
 				res = this.JsonMessageList(ChatPDURange.PUBLIC, null);
 			}
 
-			return new HttpResponse(200, res.toJSONString());	
+			return new HttpResponse(200, res.toString());
 		}
 		return HttpResponse.fail();
 	}

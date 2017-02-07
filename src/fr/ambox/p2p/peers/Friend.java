@@ -4,7 +4,8 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
-import org.json.simple.JSONObject;
+
+import com.google.gson.JsonObject;
 
 import fr.ambox.p2p.connexion.Frame;
 
@@ -55,21 +56,20 @@ public class Friend {
 		return this.peerId;
 	}
 
-	@SuppressWarnings("unchecked")
-	public JSONObject toJSON() {
-		JSONObject jsonObject = new JSONObject();
+	public JsonObject toJSON() {
+		JsonObject jsonObject = new JsonObject();
 		
 		if (this.peerId != null) {
-			jsonObject.put("id", this.peerId.getId());
-			jsonObject.put("nickname", this.peerId.getNickname());
+			jsonObject.addProperty("id", this.peerId.getId());
+			jsonObject.addProperty("nickname", this.peerId.getNickname());
 		}
 		else {
-			jsonObject.put("id", null);
-			jsonObject.put("nickname", null);
+			jsonObject.add("id", null);
+			jsonObject.add("nickname", null);
 		}
 		
-		jsonObject.put("host", this.hostAndPort.getHost());
-		jsonObject.put("port", this.hostAndPort.getPort());
+		jsonObject.addProperty("host", this.hostAndPort.getHost());
+		jsonObject.addProperty("port", this.hostAndPort.getPort());
 		return jsonObject;
 	}
 	

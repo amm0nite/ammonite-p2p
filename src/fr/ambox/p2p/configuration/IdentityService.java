@@ -7,7 +7,7 @@ import java.security.NoSuchAlgorithmException;
 import java.security.PrivateKey;
 import java.util.HashMap;
 
-import org.json.simple.JSONObject;
+import com.google.gson.JsonObject;
 
 import fr.ambox.p2p.UserService;
 import fr.ambox.p2p.connexion.PDU;
@@ -48,10 +48,9 @@ public class IdentityService extends UserService {
 		return this.privateKey;
 	}
 	
-	@SuppressWarnings("unchecked")
-	public JSONObject JsonIdentity() {
-		JSONObject jsonObject = new JSONObject();
-		jsonObject.put("nickname", this.getMyId().getNickname());
+	public JsonObject JsonIdentity() {
+		JsonObject jsonObject = new JsonObject();
+		jsonObject.addProperty("nickname", this.getMyId().getNickname());
 		return jsonObject;
 	}
 
@@ -71,7 +70,7 @@ public class IdentityService extends UserService {
 			}
 		}
 		else {
-			return new HttpResponse(200, this.JsonIdentity().toJSONString());
+			return new HttpResponse(200, this.JsonIdentity().toString());
 		}
 	}
 

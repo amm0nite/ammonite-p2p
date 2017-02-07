@@ -13,6 +13,9 @@ public class Loader {
 		this.store = new HashMap<String, Resource>();
 		
 		ArrayList<String> resourcesToLoad = new ArrayList<String>();
+
+		// TODO fix static resources
+		/*
 		resourcesToLoad.add("index.html");
 		resourcesToLoad.add("main.js");
 		resourcesToLoad.add("jquery.js");
@@ -21,6 +24,7 @@ public class Loader {
 		resourcesToLoad.add("bootstrap/img/glyphicons-halflings-white.png");
 		resourcesToLoad.add("bootstrap/img/glyphicons-halflings.png");
 		resourcesToLoad.add("bootstrap/js/bootstrap.js");
+		*/
 
 		for (String s : resourcesToLoad) {
 			try {

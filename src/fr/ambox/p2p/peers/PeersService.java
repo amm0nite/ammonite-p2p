@@ -2,9 +2,8 @@ package fr.ambox.p2p.peers;
 
 import java.util.HashMap;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import fr.ambox.p2p.UserService;
 import fr.ambox.p2p.connexion.PDU;
 import fr.ambox.p2p.connexion.ReceptionData;
@@ -35,17 +34,16 @@ public class PeersService extends UserService {
 
 	}
 
-	@SuppressWarnings("unchecked")
 	@Override
 	public HttpResponse apiGET(String[] elements, HashMap<String, String> params) {
-		JSONArray jsonArray = new JSONArray();
+		JsonArray jsonArray = new JsonArray();
 		for (PeerId peerId : this.list.values()) {
-			JSONObject jsonPeerId = new JSONObject();
-			jsonPeerId.put("id", peerId.getId());
-			jsonPeerId.put("nickname", peerId.getNickname());
+			JsonObject jsonPeerId = new JsonObject();
+			jsonPeerId.addProperty("id", peerId.getId());
+			jsonPeerId.addProperty("nickname", peerId.getNickname());
 			jsonArray.add(jsonPeerId);
 		}
-		return new HttpResponse(200, jsonArray.toJSONString());
+		return new HttpResponse(200, jsonArray.toString());
 	}
 
 	@Override
