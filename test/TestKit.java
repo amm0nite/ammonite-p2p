@@ -1,5 +1,3 @@
-package fr.ambox.p2p.test;
-
 import java.io.IOException;
 import java.util.HashMap;
 

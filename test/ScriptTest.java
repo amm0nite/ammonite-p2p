@@ -1,6 +1,4 @@
-package fr.ambox.p2p.test;
-
-import java.util.List; 
+import java.util.List;
 import javax.script.ScriptEngineFactory; 
 import javax.script.ScriptEngineManager; 
 
