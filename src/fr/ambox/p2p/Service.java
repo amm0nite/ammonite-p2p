@@ -22,6 +22,9 @@ public abstract class Service extends Thread {
     public Service getService(String name) {
         Service service = this.services.get(name);
         if (service == null) {
+            for (String srvi: this.services.keySet()) {
+                System.out.println(srvi);
+            }
             throw new RuntimeException("no such service : " + name);
         }
         return service;

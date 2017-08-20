@@ -50,6 +50,7 @@ public class App extends Service {
         chatService.bindService("identity", identityService);
         chatService.bindService("emitter", connexionEmitterService);
         chatService.bindService("peers", peersService);
+        chatService.bindService("friendship", friendshipService);
 
         connexionReceiverService.bindService("logger", loggerService);
         connexionReceiverService.bindService("identity", identityService);
@@ -84,5 +85,17 @@ public class App extends Service {
 
     public ChatService getChatService() {
         return (ChatService) this.getService("chat");
+    }
+
+    public FriendshipService getFriendshipService() {
+        return (FriendshipService) this.getService("friendship");
+    }
+
+    public IdentityService getIdentityService() {
+        return (IdentityService) this.getService("identity");
+    }
+
+    public ConfigurationService getConfigurationService() {
+        return (ConfigurationService) this.getService("configuration");
     }
 }

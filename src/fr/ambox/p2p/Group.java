@@ -28,4 +28,14 @@ public class Group {
     public App get(int index) {
         return this.apps[index];
     }
+
+    public void makeFullFriends(App a1, App a2) {
+        this.makeFriend(a1, a2);
+        this.makeFriend(a2, a1);
+    }
+
+    public void makeFriend(App a1, App a2) {
+        String hostandport = "127.0.0.1:" + a2.getConfigurationService().getOption("routerPort");
+        a1.getFriendshipService().add(hostandport, a2.getIdentityService().getMyId());
+    }
 }

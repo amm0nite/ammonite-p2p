@@ -1,5 +1,6 @@
 package fr.ambox.p2p.utils;
 
+import java.util.Collection;
 import java.util.concurrent.LinkedBlockingDeque;
 
 public class CircularList<T> {
@@ -18,7 +19,7 @@ public class CircularList<T> {
 		this.list.add(e);
 	}
 	
-	public Object[] values() {
-		return this.list.toArray();
+	public Collection<T> values() {
+		return this.list;
 	}
 }

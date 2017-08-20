@@ -1,5 +1,7 @@
 package fr.ambox.p2p.chat;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashMap;
 
 import com.google.gson.JsonArray;
@@ -61,11 +63,11 @@ public class ChatService extends UserService {
 
     @SuppressWarnings("unchecked")
     synchronized private JsonArray JsonMessageList(ChatPDURange range, String id) {
-        Object[] data = new Object[0];
+        ArrayList<ChatLineData> data = new ArrayList<ChatLineData>();
         if (range == ChatPDURange.PUBLIC) {
-            data = this.publicMessages.values();
+            data.addAll(this.publicMessages.values());
         } else if (range == ChatPDURange.FRIENDS) {
-            data = this.friendsMessages.values();
+            data.addAll(this.friendsMessages.values());
         } else if (range == ChatPDURange.PRIVATE) {
             PeersService peersService = (PeersService) this.getService("peers");
             PeerId peerId = peersService.getPeer(id);
@@ -73,7 +75,7 @@ public class ChatService extends UserService {
             if (peerId != null) {
                 CircularList<ChatLineData> list = this.privateMessages.get(peerId);
                 if (list != null) {
-                    data = list.values();
+                    data.addAll(list.values());
                 } else {
                     this.log("no discussion with " + id);
                 }
@@ -154,8 +156,7 @@ public class ChatService extends UserService {
         if (range == ChatPDURange.PRIVATE) {
             emitter.unicast(chatpdu, target);
         } else if (range == ChatPDURange.FRIENDS) {
-            FriendshipService friendshipService = (FriendshipService) this.getService("friendship");
-            for (Friend f : friendshipService.getFriends()) {
+            for (Friend f : this.getFriendshipService().getFriends()) {
                 emitter.direct(chatpdu, f);
             }
         } else if (range == ChatPDURange.PUBLIC) {
@@ -191,11 +192,31 @@ public class ChatService extends UserService {
         return HttpResponse.fail();
     }
 
+    public Collection<ChatLineData> getPrivateMessages(PeerId peerId) {
+        CircularList<ChatLineData> messageList = this.privateMessages.get(peerId);
+        if (messageList == null) {
+            return new ArrayList<ChatLineData>();
+        }
+        return messageList.values();
+    }
+
+    public Collection<ChatLineData> getFriendsMessages() {
+        return this.friendsMessages.values();
+    }
+
+    public Collection<ChatLineData> getPublicMessages() {
+        return this.publicMessages.values();
+    }
+
     public IdentityService getIdentityService() {
         return (IdentityService) this.getService("identity");
     }
 
     public PeersService getPeersService() {
         return (PeersService) this.getService("peers");
+    }
+
+    public FriendshipService getFriendshipService() {
+        return (FriendshipService) this.getService("friendship");
     }
 }
